@@ -14,3 +14,12 @@ CREATE TABLE Conexoes (
   FOREIGN KEY (id_usuario1) REFERENCES Usuarios(id_usuario),
   FOREIGN KEY (id_usuario2) REFERENCES Usuarios(id_usuario)
 );
+
+CREATE TABLE Posts (
+  id_postagem INT AUTO_INCREMENT PRIMARY KEY,
+  id_usuario INT NOT NULL,
+  data_criacao DATETIME NOT NULL,
+  conteudo TEXT NOT NULL,
+  tipo ENUM('texto', 'imagem', 'outro') NOT NULL,
+  FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario)
+);
