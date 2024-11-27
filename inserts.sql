@@ -18,3 +18,10 @@ VALUES
 (2, NOW(), 'Adoro essa imagem!', 'imagem'),
 (3, NOW(), 'Alguém viu esse evento?', 'texto'),
 (4, NOW(), 'Confira este vídeo incrível!', 'outro');
+
+INSERT INTO Comentarios (id_postagem, id_usuario, data, conteudo)
+VALUES
+(1, 2, NOW(), 'Parabéns pela postagem!'),
+(1, 3, NOW(), 'Muito interessante!'),
+(2, 1, NOW(), 'Linda imagem!'),
+(3, 4, NOW(), 'Muito relevante.');
