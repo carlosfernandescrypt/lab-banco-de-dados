@@ -54,3 +54,10 @@ VALUES
 (3, 4, NOW(), 'Você viu o evento?', 'recebida'),
 (4, 1, NOW(), 'Sim, vi sim.', 'lida');
 
+INSERT INTO Tags (nome)
+VALUES
+('Fotografia'),
+('Esportes'),
+('Tecnologia'),
+('Cinema'),
+('Viagens');
