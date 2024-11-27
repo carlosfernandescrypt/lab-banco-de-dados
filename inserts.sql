@@ -11,3 +11,10 @@ VALUES
 (2, 3, NOW()),
 (3, 4, NOW()),
 (4, 1, NOW());
+
+INSERT INTO Posts (id_usuario, data_criacao, conteudo, tipo)
+VALUES
+(1, NOW(), 'Minha primeira postagem!', 'texto'),
+(2, NOW(), 'Adoro essa imagem!', 'imagem'),
+(3, NOW(), 'Alguém viu esse evento?', 'texto'),
+(4, NOW(), 'Confira este vídeo incrível!', 'outro');
