@@ -44,3 +44,10 @@ CREATE TABLE Notificacoes (
   data_hora DATETIME NOT NULL,
   FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario)
 );
+
+CREATE TABLE Grupos (
+  id_grupo INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(50) UNIQUE NOT NULL,
+  descricao TEXT NOT NULL,
+  data_criacao DATETIME NOT NULL
+);
