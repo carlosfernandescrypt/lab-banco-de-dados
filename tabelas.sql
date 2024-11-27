@@ -35,3 +35,12 @@ CREATE TABLE Comentarios (
   FOREIGN KEY (id_comentario_pai) REFERENCES Comentarios(id_comentario),
   FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario)
 );
+
+CREATE TABLE Notificacoes (
+  id_notificacao INT AUTO_INCREMENT PRIMARY KEY,
+  id_usuario INT NOT NULL,
+  origem_id INT NOT NULL,
+  tipo ENUM('avaliação', 'comentário') NOT NULL,
+  data_hora DATETIME NOT NULL,
+  FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario)
+);
