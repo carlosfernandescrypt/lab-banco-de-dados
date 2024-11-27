@@ -25,3 +25,10 @@ VALUES
 (1, 3, NOW(), 'Muito interessante!'),
 (2, 1, NOW(), 'Linda imagem!'),
 (3, 4, NOW(), 'Muito relevante.');
+
+INSERT INTO Notificacoes (id_usuario, origem_id, tipo, data_hora)
+VALUES
+(1, 1, 'comentário', NOW()),
+(2, 3, 'comentário', NOW()),
+(3, 2, 'avaliação', NOW()),
+(4, 4, 'avaliação', NOW());
