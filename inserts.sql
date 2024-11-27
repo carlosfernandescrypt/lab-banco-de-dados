@@ -32,3 +32,9 @@ VALUES
 (2, 3, 'comentário', NOW()),
 (3, 2, 'avaliação', NOW()),
 (4, 4, 'avaliação', NOW());
+
+INSERT INTO Grupos (nome, descricao, data_criacao)
+VALUES
+('Fotografia', 'Grupo para amantes de fotografia', NOW()),
+('Esportes', 'Discussão sobre esportes', NOW()),
+('Tecnologia', 'Grupo de tecnologia', NOW());
