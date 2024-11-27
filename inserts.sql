@@ -38,3 +38,11 @@ VALUES
 ('Fotografia', 'Grupo para amantes de fotografia', NOW()),
 ('Esportes', 'Discussão sobre esportes', NOW()),
 ('Tecnologia', 'Grupo de tecnologia', NOW());
+
+INSERT INTO membrosGrupos (id_grupo, id_usuario, funcao)
+VALUES
+(1, 1, 'administrador'),
+(1, 2, 'membro'),
+(2, 3, 'administrador'),
+(3, 4, 'administrador');
+
