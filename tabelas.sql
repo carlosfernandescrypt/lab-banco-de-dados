@@ -23,3 +23,15 @@ CREATE TABLE Posts (
   tipo ENUM('texto', 'imagem', 'outro') NOT NULL,
   FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario)
 );
+
+CREATE TABLE Comentarios (
+  id_comentario INT AUTO_INCREMENT PRIMARY KEY,
+  id_postagem INT,
+  id_comentario_pai INT,
+  id_usuario INT NOT NULL,
+  data DATETIME NOT NULL,
+  conteudo TEXT NOT NULL,
+  FOREIGN KEY (id_postagem) REFERENCES Posts(id_postagem),
+  FOREIGN KEY (id_comentario_pai) REFERENCES Comentarios(id_comentario),
+  FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario)
+);
