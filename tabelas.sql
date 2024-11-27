@@ -60,3 +60,14 @@ CREATE TABLE membrosGrupos (
   FOREIGN KEY (id_grupo) REFERENCES Grupos(id_grupo),
   FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario)
 );
+
+CREATE TABLE mensagensPrivadas (
+  id_mensagem INT AUTO_INCREMENT PRIMARY KEY,
+  id_remetente INT NOT NULL,
+  id_destinatario INT NOT NULL,
+  data_hora DATETIME NOT NULL,
+  conteudo TEXT NOT NULL,
+  status ENUM('enviada', 'recebida', 'lida') NOT NULL,
+  FOREIGN KEY (id_remetente) REFERENCES Usuarios(id_usuario),
+  FOREIGN KEY (id_destinatario) REFERENCES Usuarios(id_usuario)
+);
