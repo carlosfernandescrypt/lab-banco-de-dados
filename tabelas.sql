@@ -71,3 +71,8 @@ CREATE TABLE mensagensPrivadas (
   FOREIGN KEY (id_remetente) REFERENCES Usuarios(id_usuario),
   FOREIGN KEY (id_destinatario) REFERENCES Usuarios(id_usuario)
 );
+
+CREATE TABLE Tags (
+  id_tag INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(50) UNIQUE NOT NULL
+);
