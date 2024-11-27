@@ -51,3 +51,12 @@ CREATE TABLE Grupos (
   descricao TEXT NOT NULL,
   data_criacao DATETIME NOT NULL
 );
+
+CREATE TABLE membrosGrupos (
+  id_membro INT AUTO_INCREMENT PRIMARY KEY,
+  id_grupo INT NOT NULL,
+  id_usuario INT NOT NULL,
+  funcao ENUM('membro', 'administrador') NOT NULL,
+  FOREIGN KEY (id_grupo) REFERENCES Grupos(id_grupo),
+  FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario)
+);
