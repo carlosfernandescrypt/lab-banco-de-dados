@@ -76,3 +76,11 @@ CREATE TABLE Tags (
   id_tag INT AUTO_INCREMENT PRIMARY KEY,
   nome VARCHAR(50) UNIQUE NOT NULL
 );
+
+CREATE TABLE tagsUsuarios (
+  id_relacao INT AUTO_INCREMENT PRIMARY KEY,
+  id_usuario INT NOT NULL,
+  id_tag INT NOT NULL,
+  FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario),
+  FOREIGN KEY (id_tag) REFERENCES Tags(id_tag)
+);
