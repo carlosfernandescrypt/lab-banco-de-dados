@@ -14,3 +14,8 @@ SELECT m.funcao, u.nome_usuario
 FROM membrosGrupos m
 JOIN Usuarios u ON m.id_usuario = u.id_usuario
 WHERE m.id_grupo = 1;
+
+SELECT mp.conteudo, mp.data_hora, mp.status
+FROM mensagensPrivadas mp
+WHERE (mp.id_remetente = 1 AND mp.id_destinatario = 2)
+   OR (mp.id_remetente = 2 AND mp.id_destinatario = 1);
