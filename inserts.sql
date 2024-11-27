@@ -46,3 +46,11 @@ VALUES
 (2, 3, 'administrador'),
 (3, 4, 'administrador');
 
+INSERT INTO mensagensPrivadas (id_remetente, id_destinatario, data_hora, conteudo,
+status)
+VALUES
+(1, 2, NOW(), 'Olá, tudo bem?', 'enviada'),
+(2, 3, NOW(), 'Oi, como vai?', 'lida'),
+(3, 4, NOW(), 'Você viu o evento?', 'recebida'),
+(4, 1, NOW(), 'Sim, vi sim.', 'lida');
+
